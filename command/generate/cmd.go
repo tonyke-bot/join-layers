@@ -41,7 +41,7 @@ func Setup(parser *argparse.Parser) *argparse.Command {
 	args.ConfigFile = cmd.String("c", "config", &argparse.Options{
 		Required: false,
 		Validate: util.ValidateStringArgs,
-		Help:     "path to the config file. default: config.yaml",
+		Help:     "path to the config file. default: ./config.yaml",
 		Default:  "config.yaml",
 	})
 
@@ -55,14 +55,19 @@ func Setup(parser *argparse.Parser) *argparse.Command {
 	args.OutputFolder = cmd.String("o", "output", &argparse.Options{
 		Required: false,
 		Validate: util.ValidateStringArgs,
-		Help:     "path to the output folder. default: config.yaml",
+		Help:     "path to the output folder. default: ./output",
 		Default:  "output",
 	})
 
+	defaultConcurrency := runtime.NumCPU()
+	if defaultConcurrency > 2 {
+		defaultConcurrency -= 2
+	}
+
 	args.Concurrency = cmd.Int("p", "parallel", &argparse.Options{
 		Required: false,
-		Help:     fmt.Sprintf("concurrency of image generation. default: %v", runtime.NumCPU()),
-		Default:  runtime.NumCPU(),
+		Help:     fmt.Sprintf("concurrency of image generation. default: %v", defaultConcurrency),
+		Default:  defaultConcurrency,
 	})
 
 	return cmd
