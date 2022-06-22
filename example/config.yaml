@@ -1,0 +1,244 @@
+name: "Sweetooth"
+description: "Less anxious when you have a Sweetooth🍬\nThis project was inspired by my girlfriend's fav Netflix series - \"Sweet Tooth\""
+base_uri: "https://metadata.sweetooth.io/images"
+start_id: 0
+width: 2048
+height: 2048
+additional_data:
+  external_url: "https://sweetooth.io/"
+  collection:
+    name: "Sweetooth"
+    family: "Sweetooth"
+  seller_fee_basis_points: 500
+  symbol: "SWEET"
+check_duplication: true
+is_solana: true
+solana_creator_address: "GmbUBeey1TFvK9NcpCqAJkhGGcSxxCmLJnKTW1FyoBpT"
+
+trait_sets:
+- size: 20
+  traits:
+    - name: Gender Male
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Boy
+      display_name: Species
+    - name: Male Without Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Male
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Boy
+      display_name: Species
+    - name: Male Without Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Girls
+      display_name: Species
+    - name: Female Without Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Girls
+      display_name: Species
+    - name: Female Without Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Male
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Boy
+      display_name: Species
+    - name: Male Without Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Speech Bubbles
+      display_name: Speech Bubble
+- size: 20
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Girls
+      display_name: Species
+    - name: Accessories (Above Hair)
+      display_name: Accessory
+    - name: Female With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Accessories (Under Hair)
+      display_name: Accessory
+    - name: Species Girls
+      display_name: Species
+    - name: Female With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Male
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Weapons
+      display_name: Weapons
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Boy
+      display_name: Species
+    - name: Male With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Male
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Weapons
+      display_name: Weapons
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Boy
+      display_name: Species
+    - name: Male With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Tags
+      display_name: Tag
+- size: 20
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Weapons
+      display_name: Weapons
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Girls
+      display_name: Species
+    - name: Female With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Speech Bubbles
+      display_name: Speech Bubble
+    - name: Tags
+      display_name: Tag
+- size: 46
+  traits:
+    - name: Gender Female
+      display_name: Gender
+    - name: Background
+      display_name: Background
+    - name: Weapons
+      display_name: Weapons
+    - name: Base
+      display_name: Base
+    - name: Eyes
+      display_name: Eyes
+    - name: Species Girls
+      display_name: Species
+    - name: Female With Sleeve
+      display_name: Clothes
+    - name: Mouth
+      display_name: Mouth
+    - name: Toys
+      display_name: Toy
+    - name: Speech Bubbles
+      display_name: Speech Bubble
+    - name: Tags
+      display_name: Tag
