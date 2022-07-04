@@ -373,13 +373,13 @@ func composeItems(cfg *config.Config) []*Item {
 
 				noDuplication = false
 
-				// When duplication happens, all layers in this layer set will be shuffled again and retry until there
-				// is no duplication or exceeds max allowed retry times.
+				// When duplication happens, all layers in this layer set after this certain index will be shuffled
+				// again and retry until there is no duplication or exceeds max allowed retry times.
 
-				fmt.Printf("DNA Duplicated, Retrying: %v\n", maxRetry)
+				fmt.Printf("DNA Duplicated, Retrying: %v.", maxRetry)
 
 				for layerIdx := 0; layerIdx < len(layerSet.TraitsOrder); layerIdx++ {
-					layer := expandedLayers[layerIdx]
+					layer := expandedLayers[layerIdx][i:]
 					rand.Shuffle(len(layer), func(i, j int) {
 						layer[i], layer[j] = layer[j], layer[i]
 					})
