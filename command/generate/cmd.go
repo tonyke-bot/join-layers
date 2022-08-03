@@ -324,6 +324,11 @@ func composeItems(cfg *config.Config) []*Item {
 			}
 			images := getImagesForLayer(imageCache, layerFolder, layerName)
 
+			if len(images) == 0 {
+				fmt.Sprintln(tm.ResetLine(fmt.Sprintf("There is no available images in %v", layerFolder)))
+				os.Exit(-1)
+			}
+
 			expandedLayer := make([]*Image, 0, layerSet.Size)
 
 			raritySum := float64(0)
@@ -354,7 +359,7 @@ func composeItems(cfg *config.Config) []*Item {
 			expandedLayers[layerIdx] = expandedLayer
 		}
 
-		maxRetry := 20
+		maxRetry := 50
 		for ; cfg.CheckDuplication && maxRetry > 0; maxRetry-- {
 			dnaDuplication := map[string]bool{}
 			noDuplication := true
@@ -376,7 +381,7 @@ func composeItems(cfg *config.Config) []*Item {
 				// When duplication happens, all layers in this layer set after this certain index will be shuffled
 				// again and retry until there is no duplication or exceeds max allowed retry times.
 
-				fmt.Printf("DNA Duplicated, Retrying: %v.", maxRetry)
+				fmt.Println(tm.ResetLine(fmt.Sprintf("DNA Duplicated, Retrying: %v.", maxRetry)))
 
 				for layerIdx := 0; layerIdx < len(layerSet.TraitsOrder); layerIdx++ {
 					layer := expandedLayers[layerIdx][i:]
@@ -394,7 +399,7 @@ func composeItems(cfg *config.Config) []*Item {
 		}
 
 		if maxRetry <= 0 {
-			fmt.Printf("Too much duplication! Please try to reduce size of Layer Set #%v\r\n", layerSetIdx)
+			fmt.Println(tm.ResetLine(fmt.Sprintf("Too much duplication! Please try to reduce size of Layer Set #%v", layerSetIdx)))
 			os.Exit(-1)
 		}
 
